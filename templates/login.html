@@ -1,0 +1,28 @@
+<div class="w3-row">
+  <div class="w3-container {{setTheme}}">
+    <h2>{{header}}</h2>
+  </div>
+
+  <form class="">
+    <label class="w3-label">Username</label>
+      <input class="w3-input" type="text" ng-model="user.username">
+    <label class="w3-label">Password</label>
+      <input class="w3-input" type="password" ng-model="user.password">
+    <div class="w3-col m10 w3-container"></div>
+    <div class="w3-col m2 w3-container" style="margin-right:0px;">
+      <p><button class="w3-btn {{setTheme}}" style="width:150px; margin-right:0px;" ng-click="login(user)">Submit</button></p>
+    </div>
+  </form>
+
+  <!-- <div class="w3-col m12 w3-container {{setTheme}}" style="height:40px;">
+    <center><quote>{{footer}}</quote></center>
+  </div> -->
+  <footer class="w3-col m12 w3-container {{setTheme}}" style="height:40px;">
+    <!-- <h5>Footer</h5>
+    <p>Footer information goes here</p> -->
+    <!-- <center style="margin-top:50%;"><quote>{{footer}}</quote></center> -->
+    <center><quote><h6>{{footer}}</h6></quote></center>
+  </footer>
+
+
+</div>

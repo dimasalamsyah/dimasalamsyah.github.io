@@ -1,2 +1,2 @@
-# dimasalamsyah.github.io
-first web
+# accounting
+membuat perhitungan keuangan

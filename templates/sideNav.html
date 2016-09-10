@@ -1,0 +1,12 @@
+<nav class="w3-sidenav w3-collapse w3-white w3-card-2 w3-animate-left" style="width:250px;" id="mySidenav">
+  <div class="w3-container {{setTheme}}" style="height:210px;"></div>
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-closenav w3-large w3-hide-large">Close &times;</a>
+
+
+  <a href="#login">Link 1</a>
+
+  <div ng-repeat="menu in sideMenu">
+      <a ng-model="menu" ng-href="#{{menu.link}}">{{menu.menu}}</a>
+  </div>
+</nav>

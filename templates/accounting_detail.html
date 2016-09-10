@@ -1,0 +1,48 @@
+<div class="w3-row">
+  <div class="w3-container {{setTheme}}">
+    <h2 style="float:left">{{header}}</h2>
+    <h2><span class="w3-opennav w3-xlarge w3-hide-large" onclick="w3_open()" style="float:right">&#9776;</span></h2>
+  </div>
+
+<p>
+  <table class="w3-table w3-striped w3-border w3-card-4 w3-hoverable">
+    <thead>
+    <tr class="{{setTheme}}">
+      <th style="width:10%">Begin</th>
+      <th style="width:10%">In</th>
+      <th style="width:10%">Out</th>
+      <th style="width:10%">Ending</th>
+      <th style="width:25%">Note</th>
+      <th>Date</th>
+      <th colspan="2" style="width:10%">Action</th>
+
+    </tr>
+    </thead>
+
+    <tr ng-repeat="(key, account) in get_account | orderBy : 'begin' | limitTo:pageSize">
+      <td><span id="currency-custom">{{account.begin | currency:""}}</span></td>
+      <td><span id="currency-custom">{{account.in_  | currency:""}}</span></td>
+      <td><span id="currency-custom">{{account.out | currency:""}}</span></td>
+      <td><span id="currency-custom">{{account.ending | currency:""}}</span></td>
+      <td><span>{{account.note}}</span></td>
+      <td><span>{{account.updateAt | date:"MM/dd/yyyy 'at' h:mma"}}</span></td>
+      <!-- <td>{{ account.$id }}</td> -->
+      <td>
+          <button class="w3-btn w3-red" style="" ng-click="editItem(account)">
+            <i class="fa fa-pencil"></i>
+          </button>
+      </td>
+      <td><button class="w3-btn w3-red" style="" ng-click="deleteItem(account, key)">
+        <i class="fa fa-times"></i>
+      </button></td>
+    </tr>
+
+  </table>
+</p>
+
+  <footer class="w3-col m12 w3-container {{setTheme}}" style="height:40px;">
+    <center><quote><h6>{{footer}}</h6></quote></center>
+  </footer>
+
+
+</div>
