@@ -57,7 +57,7 @@ app.config(function($routeProvider) {
         templateUrl : "templates/about.html",
         controller : "aboutCtrl"
     })
-    //$routeProvider.otherwise({redirectTo: '/login'})
+    $routeProvider.otherwise({redirectTo: '/accounting'})
 
     ;
 });
